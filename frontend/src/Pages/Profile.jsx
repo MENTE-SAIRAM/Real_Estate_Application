@@ -80,7 +80,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       dispatch(updateUserStart());
-      const res = await fetch(`http://localhost:3000/api/user/update/${currentUser._id}`, {
+      const res = await fetch(`https://real-estate-application-2-x6ua.onrender.com/api/user/update/${currentUser._id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const Profile = () => {
   const handleDeleteUser = async () => {
     try {
       dispatch(deleteUserStart());
-      const res = await fetch(`http://localhost:3000/api/user/delete/${currentUser._id}`, {
+      const res = await fetch(`https://real-estate-application-2-x6ua.onrender.com/api/user/delete/${currentUser._id}`, {
         method: "DELETE",
       });
 
@@ -123,7 +123,7 @@ const Profile = () => {
   const handleSignOut = async () => {
     try {
       dispatch(signOutUserStart());
-      const res = await fetch(`http://localhost:3000/api/auth/signout`);
+      const res = await fetch(`https://real-estate-application-2-x6ua.onrender.com/api/auth/signout`);
       const data = await res.json();
       if (data.success === false) {
         dispatch(signOutUserFailure(data.message));
@@ -139,7 +139,7 @@ const Profile = () => {
   const handleShowListings = async () => {
     try {
       setShowListingsError(false);
-      const res = await fetch(`http://localhost:3000/api/user/listings/${currentUser._id}`);
+      const res = await fetch(`https://real-estate-application-2-x6ua.onrender.com/api/user/listings/${currentUser._id}`);
       const data = await res.json();
 
       if (data.success === false) {
@@ -157,7 +157,7 @@ const Profile = () => {
 
   const handleListingDelete = async (listingId) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/listing/delete/${listingId}`, {
+      const res = await fetch(`https://real-estate-application-2-x6ua.onrender.com/api/listing/delete/${listingId}`, {
         method: "DELETE",
         });
 
