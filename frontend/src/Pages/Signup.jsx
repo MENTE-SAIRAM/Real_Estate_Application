@@ -20,7 +20,7 @@ const SignUp = () => {
 
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/api/auth/signup", {  
+      const res = await fetch("https://real-estate-application-2-x6ua.onrender.com/api/auth/signup", {  
         method: "POST",
         headers: {
           "Content-Type": "application/json",
