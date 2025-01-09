@@ -139,7 +139,7 @@ const CreateListing = () => {
       setLoading(true);
       setError(false);
 
-      const res = await fetch("http://localhost:3000/api/listing/create", {
+      const res = await fetch("https://real-estate-application-2-x6ua.onrender.com/api/listing/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
