@@ -9,7 +9,7 @@ const Contact = ({ listing }) => {
   useEffect(() => {
     const fetchLandlord = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/user/${listing.userRef}`);
+        const res = await fetch(`https://real-estate-application-2-x6ua.onrender.com/api/user/${listing.userRef}`);
         const data = await res.json();
         if (data.success === false) {
           return;
